@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator2</title>
+    <link rel="stylesheet" href="calculator2.css">
+
+</head>
+<div class="wrap">
+    <form name="cal">
+        <input type="text" name="display">
+        <!--
+            <input type="text" id="output">  
+        -->
+
+        <br><br>
+
+        <!--
+            <input type="button" value="1" class="number">  
+            <onclick> property of the Notification interface specifies an EventListener to receive click events. > 
+
+        -->
+
+        <input type="button" value="7" onclick="cal.display.value+='7'">
+        <input type="button" value="8" onclick="cal.display.value+='8'">
+        <input type="button" value="9" onclick="cal.display.value+='9'">
+        <input type="button" value="+" onclick="cal.display.value+='+'">
+        <br><br>
+        <input type="button" value="4" onclick="cal.display.value+='4'">
+        <input type="button" value="5" onclick="cal.display.value+='5'">
+        <input type="button" value="6" onclick="cal.display.value+='6'">
+        <input type="button" value="-" onclick="cal.display.value+='-'">
+        <br><br>
+        <input type="button" value="1" onclick="cal.display.value+='1'">
+        <input type="button" value="2" onclick="cal.display.value+='2'">
+        <input type="button" value="3" onclick="cal.display.value+='3'">
+        <input type="button" value="*" onclick="cal.display.value+='*'">
+        <br><br>
+        <input type="button" value="0" onclick="cal.display.value+='0'">
+        <input type="button" value="/" onclick="cal.display.value+='/'">
+       <!-- ??? nzn koks turi buti operatorius, %= grazina NaN... 
+        <input type="button" value="%" onclick="cal.display.value+='%'">
+          -->
+        <input type="button" value="." onclick="cal.display.value+='.'">
+
+        <br><br>
+        <input type="button" value="C" onclick="cal.display.value=''" id="del">
+        <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects <eval() function pateikia string> eval() is a dangerous function -->
+        <input type="button" value="=" onclick="cal.display.value =eval(cal.display.value)" id="equal">
+
+    </form>
+
+    </body>
+
+</html>
